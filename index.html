@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Backbone Collection Filtering/Sorting</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <script id="modelTemplate" type="text/template">
+            <img class="thumbnail" src="<%= ImageUrl %>"/>
+            <ul>
+                <li>Type: <%= EstablishmentType %></li>
+                <li>Location: <%= Location %></li>
+                <li>Name: <%= Name %></li>
+                <li>Stars: <%= Stars %></li>
+                <li>Distance: <%= Distance %></li>
+                <li>MinCost: <%= MinCost %></li>
+                <li>TrpRating: <%= TrpRating %></li>
+                <li>UserRating: <%= UserRating %></li>
+            </ul>
+
+
+        </script>
+
+        <script data-main="js/main.js" src="js/libs/requirejs/require.js"></script>
+
+    </head>
+    <body>
+        <div id="sortFormContainer">
+            <form id="sortCollection" action="#">
+                <div>Sort by:</div>
+                <div id="elements">
+                    <label for="select">Sort by:</label>
+                    <select id="select">
+                        <option value=""> </option>
+                        <option value="Distance">Distance</option>
+                        <option value="Stars">Stars</option>
+                        <option value="MinCost">MinCost</option>
+                        <option value="TrpRating">TrpRating</option>
+                        <option value="UserRating">UserRating</option>
+                    </select>
+                    <button id="sort">Sort</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="searchFormContainer">
+            <form id="searchCollection" action="#">
+                <div style="float: left">Filter by:</div>
+                <div>
+                    <label for="Name">Name: </label><input id="Name" type="text" />
+                    <label for="Stars">Stars: </label>
+                    <select id="Stars">
+                        <option value=""> </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <!--<input id="Stars" type="text" />-->
+                    <label for="TrpRating">TrpRating: </label><input id="TrpRating" type="text" />
+                    <label for="UserRating">UserRating: </label><input id="UserRating" type="text" />
+                    <label for="MinCost">MinCost: </label><input id="MinCost" type="text" />
+                    <button id="search">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="collection">
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+body {
+    background-color: #eee;
+}
+
+.collectionContainer {
+    outline: 1px solid #aaa;
+    width: 380px;
+    height: 250px;
+    background-color: #fff;
+    float: left;
+    margin: 5px;
+}
+
+.collectionContainer img {
+    float: left;
+    margin: 10px;
+}
+
+.collectionContainer ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.collectionContainer button {
+    float: right;
+    margin: 10px;
+}
+
+img.thumbnail {
+    width:100%;
+    max-width: 170px;
+    height: 100%;
+    max-height: 230px;
+}
+
+label, select {
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 25px;
+}
+
+label, input, select {
+    display: block;
+    margin-bottom: 10px;
+    float: left;
+}
+
+#searchCollection label[for="name"], #searchCollection label[for="TrpRating"], #searchCollection label[for="TrpRating"], #searchCollection label[for="MinCost"], #sortCollection label[for="select"] {
+    clear: both;
+}
+
+#searchCollection button, #sortCollection button {
+    display: block;
+    margin: 5px 20px 10px 10px;
+    float: right;
+    clear: both;
+}
+
+#searchCollection div, #sortCollection div {
+    width: 550px;
+}
+
+#searchCollection div:after, #searchCollection div:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}
